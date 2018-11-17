@@ -16,7 +16,6 @@ export class LocationsPage {
 	){
 		this.locationProvider.$locationStore.subscribe((data)=>{
 			this.locations = data;
-			console.log(this.locations);
 		});
 	}
 

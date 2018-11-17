@@ -21,16 +21,6 @@ const pages = [
 	LocationsPage
 ];
 
-
-// components
-
-import { LocationInfoItemComponent } from '../components/location-info-item/location-info-item';
-
-const components = [
-	LocationInfoItemComponent
-];
-
-
 // providers
 
 
@@ -41,8 +31,7 @@ import { ApiProvider } from '../providers/api/api';
 @NgModule({
 	declarations: [
 		MyApp,
-		...pages,
-		...components
+		...pages
 	],
 	imports: [
 		BrowserModule,

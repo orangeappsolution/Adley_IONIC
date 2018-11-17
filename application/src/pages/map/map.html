@@ -6,5 +6,7 @@
 
 
 <ion-content>
-	<agm-map [zoomControl]='true'></agm-map>
+	<agm-map [latitude]='locations[0]?.coordinates.lat' [longitude]='locations[0]?.coordinates.lng' #map [disableDefaultUI]='true' [zoomControl]='false'>
+		<agm-marker *ngFor='let location of locations' [latitude]='location.coordinates.lat' [longitude]='location.coordinates.lng'></agm-marker>
+	</agm-map>
 </ion-content>

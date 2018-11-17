@@ -10,26 +10,36 @@
 	<ng-container *ngIf='locations?.length > 0'>
 		
 		<ng-container *ngIf='isLoading'>
-			<div padding margin>
-				<ion-spinner color='primary'></ion-spinner>
+			<div text-center padding margin>
+				<ion-spinner color='secondary'></ion-spinner>
 			</div>
 		</ng-container>
 
 		<ion-list>
 			<ion-item *ngFor='let location of locations'>
-				<location-info-item item-content></location-info-item>
+				<ion-icon item-start name='ios-pin-outline'></ion-icon>
+				<h2 class='lbl-location-address' text-wrap>
+					{{location.address}}
+				</h2>
+				<p margin-top class='lbl-location-coordinates'>
+					lat: {{location?.coordinates?.lat}}, lng: {{location?.coordinates?.lng}} 
+				</p>
 			</ion-item>
 		</ion-list>
 	</ng-container>
 
 	<ng-container *ngIf='locations?.length == 0'>
 		<ng-container *ngIf='isLoading'>
-			<div padding margin>
-				<ion-spinner color='primary'></ion-spinner>
+			<div text-center padding margin>
+				<ion-spinner color='secondary'></ion-spinner>
 			</div>
 		</ng-container>
 		<ng-container *ngIf='!isLoading && isError'>
-			
+			<div padding margin text-center>
+				<ion-label color='danger'>
+					Error loading locations
+				</ion-label>
+			</div>
 		</ng-container>
 	</ng-container>
 

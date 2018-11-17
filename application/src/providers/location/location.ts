@@ -15,7 +15,7 @@ export class LocationProvider {
 
 	public reload(){
 
-		let apiObservable = this.http.get("locations");
+		let apiObservable = this.http.get("locations").shareReplay();
 		apiObservable.subscribe((data : Array<any>)=>{
 
 			if(!Array.isArray(this.locations))
