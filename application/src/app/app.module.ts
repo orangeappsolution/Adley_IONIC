@@ -4,7 +4,7 @@ import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-
+import { AgmCoreModule } from '@agm/core';
 
 
 // Pages
@@ -27,6 +27,9 @@ const pages = [
 	],
 	imports: [
 		BrowserModule,
+		AgmCoreModule.forRoot({
+			apiKey : 'AIzaSyCdkOQwSbWWfqDt1N74qtkOv2cve9ICLyo'
+		}),
 		IonicModule.forRoot(MyApp, {
 			mode: 'md'
 		})
