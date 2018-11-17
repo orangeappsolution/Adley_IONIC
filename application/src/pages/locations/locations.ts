@@ -1,24 +1,42 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
-
-/**
- * Generated class for the LocationsPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import { LocationProvider } from '../../providers/location/location';
 
 @Component({
-  selector: 'page-locations',
-  templateUrl: 'locations.html',
+	selector: 'page-locations',
+	templateUrl: 'locations.html',
 })
 export class LocationsPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-  }
+	private isLoading = false;
+	private isError = false;
+	private locations = [];
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad LocationsPage');
-  }
+	constructor(
+		private locationProvider : LocationProvider
+	){
+		this.locationProvider.$locationStore.subscribe((data)=>{
+			this.locations = data;
+			console.log(this.locations);
+		});
+	}
+
+	ionViewDidEnter(){
+		this.getLocations();
+	}
+
+	getLocations(){
+
+		this.isLoading = true;
+		this.isError = false;
+
+		this.locationProvider.reload().subscribe(()=>{
+			this.isLoading = false;
+			this.isError = false;
+		},()=>{
+			this.isLoading =false;
+			this.isError = true;
+		});
+
+	}
 
 }

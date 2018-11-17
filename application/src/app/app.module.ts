@@ -5,6 +5,7 @@ import { MyApp } from './app.component';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { AgmCoreModule } from '@agm/core';
+import { HttpClientModule } from '@angular/common/http';
 
 
 // Pages
@@ -13,6 +14,7 @@ import { TabsPage } from '../pages/tabs/tabs';
 import { MapPage } from '../pages/map/map';
 import { LocationsPage } from '../pages/locations/locations';
 
+
 const pages = [
 	TabsPage,
 	MapPage,
@@ -20,15 +22,33 @@ const pages = [
 ];
 
 
+// components
+
+import { LocationInfoItemComponent } from '../components/location-info-item/location-info-item';
+
+const components = [
+	LocationInfoItemComponent
+];
+
+
+// providers
+
+
+import { LocationProvider } from '../providers/location/location';
+import { ApiProvider } from '../providers/api/api';
+
+
 @NgModule({
 	declarations: [
 		MyApp,
-		...pages
+		...pages,
+		...components
 	],
 	imports: [
 		BrowserModule,
+		HttpClientModule,
 		AgmCoreModule.forRoot({
-			apiKey : 'AIzaSyCdkOQwSbWWfqDt1N74qtkOv2cve9ICLyo'
+			apiKey : ''
 		}),
 		IonicModule.forRoot(MyApp, {
 			mode: 'md'
@@ -42,7 +62,9 @@ const pages = [
 	providers: [
 		StatusBar,
 		SplashScreen,
-		{ provide: ErrorHandler, useClass: IonicErrorHandler }
+		{ provide: ErrorHandler, useClass: IonicErrorHandler },
+    	LocationProvider,
+    	ApiProvider
 	]
 })
 export class AppModule { }

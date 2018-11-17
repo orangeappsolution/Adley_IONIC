@@ -1,0 +1,63 @@
+{
+  "locations": [{
+  	"address": "Sarjan Society Surat, Gujarat 395008",
+  	"coordinates" : {
+  		"lat" : 21.239914,
+  		"lng" : 72.829274
+  	}
+  },{
+  	"address": "Ambavadi Kamalbaug Society Varachha, Surat, Gujarat 395006",
+  	"coordinates" : {
+  		"lat" : 21.206206,
+  		"lng" : 72.851136
+  	}
+  },{
+  	"address": "Vishal Nagar Society Adajan Gam, Adajan, Surat, Gujarat 395009",
+  	"coordinates" : {
+  		"lat" : 21.192459,
+  		"lng" : 72.802540
+  	}
+  },{
+  	"address": "Friends Colony, Bholav, Bharuch, Gujarat 392012",
+  	"coordinates" : {
+  		"lat" : 21.711109,
+  		"lng" : 72.999049
+  	}
+  },{
+  	"address": "Jalaram Society Rajpipla, Gujarat 393145",
+  	"coordinates" : {
+  		"lat" : 21.865006,
+  		"lng" : 73.508855
+  	}
+  },{
+  	"address": "Oghani Maharashtra 425452",
+  	"coordinates" : {
+  		"lat" : 21.695247,
+  		"lng" : 73.916988
+  	}
+  },{
+  	"address": "Rabarika Gujarat 360370",
+  	"coordinates" : {
+  		"lat" : 21.813070,
+  		"lng" : 70.612679
+  	}
+  },{
+  	"address": "Chandi Bazar, Opp. Head Post Office Kadiawad, Jamnagar, Gujarat 361001",
+  	"coordinates" : {
+  		"lat" : 22.464411,
+  		"lng" : 70.077996
+  	}
+  },{
+  	"address": "Kharva Chaklo, Kishan Park Society, Jamnagar, Gujarat 361001",
+  	"coordinates" : {
+  		"lat" : 22.461735,
+  		"lng" : 70.074263
+  	}
+  },{
+  	"address": "Valkeshwari St Phase 2, Valkeshwari, Park Colony, Jamnagar, Gujarat 361008",
+  	"coordinates" : {
+  		"lat" : 22.471556,
+  		"lng" : 70.058572
+  	}
+  }]
+}
