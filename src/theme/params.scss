@@ -1,0 +1,33 @@
+$openSansMap : (
+	'font-family' : "OpenSans",
+	'light' : 300,
+	'normal' : 400,
+	'bold' : 600,
+	'semi-bold' : 700,
+	'extra-bold' : 900
+);
+
+$primaryFontMap : $openSansMap;
+
+
+
+
+
+// global sass functions for pages
+
+@mixin primaryFont($weight){
+	$font : $primaryFontMap;
+	font-family: map-get($map: $font, $key: 'font-family') !important;
+	font-weight: map-get($map: $font, $key: $weight) !important;
+}
+
+
+@function getMaterialMap($color){
+	@return map-get($map: $material-colors, $key: $color);
+}
+
+@function getMaterialColor($color,$weight){
+	$colorMap : map-get($map: $material-colors, $key: $color);
+	$color : map-get($map: $colorMap, $key: $weight);
+	@return $color;
+}

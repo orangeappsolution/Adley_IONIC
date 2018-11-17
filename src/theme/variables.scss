@@ -1,0 +1,39 @@
+$font-family-base : "OpenSans","Roboto", "Helvetica Neue", sans-serif;
+$font-path: "../assets/fonts";
+$app-direction: ltr;
+
+
+
+
+@import "material-colors.scss";
+@import "params.scss";
+
+
+
+
+
+
+$primaryColorMap : map-get($map: $material-colors, $key: 'light-blue');
+$secondaryColorMap : map-get($map: $material-colors, $key: 'green');
+$dangerColorMap : map-get($map: $material-colors, $key: 'deep-orange');
+$lightColorMap : map-get($map: $material-colors, $key: 'grey');
+$darkColorMap : map-get($map: $material-colors, $key: 'blue-grey');
+
+$colors: (
+	primary:    map-get($map: $primaryColorMap, $key: "500"),
+	secondary:  map-get($map: $secondaryColorMap, $key: "500"),
+	danger:     map-get($map: $dangerColorMap, $key: "500"),
+	light:      #ffffff,
+	dark:       map-get($map: $darkColorMap, $key: "800")
+);
+
+
+@import "ionic.globals";
+@import "ionic.theme.default";
+@import "custom-theme.scss";
+
+
+@import "ionic.ionicons";
+@import "roboto";
+@import "noto-sans";
+@import "fonts.scss";

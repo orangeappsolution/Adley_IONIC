@@ -1,0 +1,28 @@
+
+// Toolbar height
+
+$toolbar-ios-height	: 100px;
+$toolbar-md-height	: $toolbar-ios-height;
+
+
+
+// Tabbar configuration
+
+$tabs-ios-tab-min-height : 80px;
+$tabs-md-tab-min-height : 80px;
+
+
+$tabTextColor : getMaterialColor("grey","400") !important;
+$tabActiveTextColor : getMaterialColor("orange","500") !important;
+
+$tabs-ios-tab-text-color : $tabTextColor;
+$tabs-ios-tab-text-color-active	: $tabActiveTextColor;
+$tabs-ios-tab-icon-color : $tabTextColor;
+$tabs-ios-tab-icon-color-active : $tabActiveTextColor;
+$tabs-ios-tab-icon-size	: 3rem;
+
+$tabs-md-tab-text-color	: $tabs-ios-tab-text-color;
+$tabs-md-tab-text-color-active	: $tabs-ios-tab-text-color-active;
+$tabs-md-tab-icon-color	: $tabs-ios-tab-icon-color;
+$tabs-md-tab-icon-color-active	: $tabs-ios-tab-icon-color-active;
+$tabs-md-tab-icon-size	: $tabs-ios-tab-icon-size;
